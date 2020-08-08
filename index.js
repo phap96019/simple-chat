@@ -11,6 +11,7 @@ io.on("connection", function (socket) {
   console.log("user connected");
   socket.on("roomId", function (...data) {
     //data[0]: roomId, data[1]: message
+    console.log("HI");
     io.emit(data[0], data[1]);
   });
   socket.on("disconnect", () => {
